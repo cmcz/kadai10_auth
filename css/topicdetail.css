@@ -1,0 +1,68 @@
+/* Show Image */
+.fixed-size-image {
+    width: 100%; /* Ensures it scales to the width of the div */
+    max-height: 600px; /* Set a fixed max height */
+    object-fit: cover; /* Ensures the image scales while covering the area */
+    border-radius: 20px; /* Adjust the value as needed */
+    padding: 10px;
+}
+
+.slideshow-container {
+    max-height: 600px; /* Limit the size of the slideshow container */
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none; /* Hide all slides by default */
+}
+
+.mySlides:first-child {
+    display: block; /* Make the first slide visible by default */
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Navigation dots */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+  
+
+/* Rating Bar Fill */
+@keyframes rateingfillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--bar-width);
+    }
+}
+
+.rating-bar-fill {
+    animation: rateingfillBar 1.5s ease-out forwards;
+}
